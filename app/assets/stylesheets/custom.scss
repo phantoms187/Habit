@@ -4,6 +4,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$turtle-green: #73ff2d;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -15,6 +16,18 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background-image: url("starpower.jpg");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  /*background: #d0f9cf;*/
+}
+
+.micro-window {
+    background: #d0f9cf;
+    color: white;
 }
 
 section {
@@ -34,8 +47,9 @@ textarea {
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, span {
   line-height: 1;
+  color: white;
 }
 
 h1 {
@@ -43,6 +57,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: white;
 }
 
 h2 {
@@ -51,12 +66,21 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: white;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: white;
+}
+
+a{
+  color: #f9cd39;
+}
+
+label{
+  color: white;
 }
 
 
@@ -66,14 +90,29 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: #f5f7f4;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: $turtle-green;
     text-decoration: none;
+  }
+}
+
+#navnavy {
+  color: white;
+}
+
+.drop{
+  color: white;
+  background: black;
+  a {
+    color: white;
+  }
+  li {
+    color: green;
   }
 }
 
@@ -82,12 +121,12 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  border-top: 1px solid $turtle-green;
+  color: white;
   a {
-    color: $gray;
+    color: white;
     &:hover {
-      color: $gray-darker;
+      color: $turtle-green;
     }
   }
   small {
@@ -141,6 +180,17 @@ aside {
   }
 }
 
+#input{
+  background-color:white;
+}
+
+.my-button{
+ background: #000000;
+ color: #73FF2D;
+ font-weight: bold;
+ border: 1px solid #73FF2D;
+}  
+
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -150,7 +200,15 @@ aside {
   margin-top: 15px;
 }
 
+
 /* forms */
+
+.form{
+  color:white;
+  label{
+    color: white;
+  }
+}
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
