@@ -5,6 +5,8 @@
 
 $gray-medium-light: #eaeaea;
 $turtle-green: #73ff2d;
+$midnight: #191919;
+$mikey: #ffc43a;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -17,7 +19,7 @@ $turtle-green: #73ff2d;
 body {
   padding-top: 60px;
   background-image: url("starpower.jpg");
-  background-color: #cccccc; /* Used if the image is unavailable */
+  background-color: #191919; /* Used if the image is unavailable */
   height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -26,7 +28,7 @@ body {
 }
 
 .micro-window {
-    background: #d0f9cf;
+    background: $midnight;
     color: white;
 }
 
@@ -40,6 +42,8 @@ textarea {
 
 .center {
   text-align: center;
+  background: $midnight;
+  color: #EFECF2;
   h1 {
     margin-bottom: 10px;
   }
@@ -142,7 +146,7 @@ footer {
   }
 }
 
-/* miscellaneous */
+/*miscellaneous*/ 
 
 .debug_dump {
   clear: both;
@@ -186,9 +190,13 @@ aside {
 
 .my-button{
  background: #000000;
- color: #73FF2D;
+ color: $turtle-green;
  font-weight: bold;
  border: 1px solid #73FF2D;
+ &:hover {
+      text-decoration: none;
+      color: $mikey;
+ }
 }  
 
 .gravatar {
@@ -200,6 +208,52 @@ aside {
   margin-top: 15px;
 }
 
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
 
 /* forms */
 
