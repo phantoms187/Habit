@@ -1,0 +1,26 @@
+<% if logged_in? %>
+<% provide(:title, "Activities") %>
+
+
+  <h1>Activities</h1>
+  
+  <%= form_for(@activity) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+  
+    <div class="field">
+      <%= f.label "Activities" %><br />
+      <%= f.collection_check_boxes :user_id, Activity.all, :id, :user_id do |b| %>
+        <div class="collection-check-box">
+          <%= b.check_box %>
+          <%= b.label %>
+        </div>
+      <% end %>
+     
+      <%= f.submit "Submit", class: "btn btn-lg my-button" %>
+   
+    </div>
+
+  <% end %>
+  
+<% end %>
+ 

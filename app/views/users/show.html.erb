@@ -21,4 +21,14 @@
       <%= will_paginate @microposts %>
     <% end %>
   </div>
+  <div class="col-md-offset-4 col-md-8 act-window">
+    <%= render 'follow_form' if logged_in? %>
+    <% if @user.activities.any? %>
+      <h3>Activities (<%= @user.activities.count %>)</h3>
+      <ol class="activities">
+        <%= render @activities %>
+      </ol>
+      <%= will_paginate @activities %>
+    <% end %>
+  </div>
 </div>

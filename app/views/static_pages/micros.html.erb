@@ -7,21 +7,16 @@
       <section class="stats">
         <%= render 'shared/stats' %>
       </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
     </aside>
-    
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
   </div>
 <% else %>
-<div class="center jumbotron">
-  <h1>Good Afternoon Meg!</h1>
-  <!-- <%= image_tag("starpower.jpg") %>  -->
-  
-  <h2 class="welcome-habit">
-    Welcome to Habit!
-  </h2>
-  
-  <!-- <%= link_to "Sign Up Now!", signup_path, class: "btn btn-lg my-button" %> -->
-  
-</div>
 
 
 <% end %>

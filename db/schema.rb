@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190611092539) do
+ActiveRecord::Schema.define(version: 20190624103034) do
+
+  create_table "activities", force: :cascade do |t|
+    t.integer "user_id"
+    t.boolean "climb"
+    t.boolean "duolingo"
+    t.integer "teeth"
+    t.integer "mia"
+    t.integer "run"
+    t.integer "keyboard"
+    t.integer "pull"
+    t.integer "floor"
+    t.integer "bell"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "created_at"], name: "index_activities_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_activities_on_user_id"
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"

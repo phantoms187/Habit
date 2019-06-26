@@ -1,3 +1,39 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.my-acts{
+    margin: auto;
+    width: 70%;
+    border: 3px solid green;
+    padding: 10px;
+    text-align: left;
+}
+
+.my-acts label {
+  display: block;
+  font-size: 22px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-indent: -15px;
+}
+
+.my-acts input {
+  width: 13px;
+  height: 13px;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+  -ms-transform: scale(1.75); /* IE */
+  -moz-transform: scale(1.75); /* FF */
+  -webkit-transform: scale(1.75); /* Safari and Chrome */
+  -o-transform: scale(1.75); /* Opera */
+  text-align: right;
+}
+
+.my-acts ul {
+  -webkit-column-count: 3;
+  -webkit-column-gap: 40px;
+      text-decoration: none;
+
+    	
+
+}
