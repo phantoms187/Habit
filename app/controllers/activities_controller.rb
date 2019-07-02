@@ -5,7 +5,7 @@ class ActivitiesController < ApplicationController
        @activity = current_user.activities.build(activities_params)
     if @activity.save
       flash[:success] = "Daily activities recorded!"
-      redirect_to root_url
+      redirect_to users_url
     else
       render 'static_pages/home'
     end

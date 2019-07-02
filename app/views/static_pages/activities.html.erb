@@ -3,24 +3,57 @@
 
 
   <h1>Activities</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 checkbox-inline daily">
+    
   
-  <%= form_for(@activity) do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
-  
-    <div class="field">
-      <%= f.label "Activities" %><br />
-      <%= f.collection_check_boxes :user_id, Activity.all, :id, :user_id do |b| %>
-        <div class="collection-check-box">
-          <%= b.check_box %>
-          <%= b.label %>
-        </div>
-      <% end %>
-     
-      <%= f.submit "Submit", class: "btn btn-lg my-button" %>
-   
-    </div>
-
-  <% end %>
+        <%= form_for(@activity) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+        
+              <div class="row">
+                  
+                <div class="col-md-3">
+                    <%= f.label :climb %>
+                    <%= f.check_box :climb, class: 'form-control checkbox-inline' %>
+                    <br><br>
+                    <%= f.label :duolingo %>
+                    <%= f.check_box :duolingo, class: 'form-control checkbox-inline' %>
+                    <br><br>
+                    <%= f.label :teeth %>
+                    <%= f.number_field :teeth, in: 0..5, step: 1, class: 'form-control-sm' %>
+                </div>
+             
+                <div class="col-md-3">
+                    <%= f.label :mia %>
+                    <%= f.number_field :mia, in: 0..5, step: 1, class: 'form-control-sm' %>                
+                    <br><br>
+                    <%= f.label :run %>
+                    <%= f.number_field :run, in: 0..5, step: 1, class: 'form-control-sm' %>                
+                    <br><br>
+                    <%= f.label :keyboard %>
+                    <%= f.number_field :keyboard, in: 0..5, step: 1, class: 'form-control-sm' %>
+                </div>
+                
+                 <div class="col-md-3">
+                    <%= f.label :pull %>
+                    <%= f.number_field :pull, in: 0..5, step: 1, class: 'form-control-sm' %>                
+                    <br><br>
+                    <%= f.label :floor %>
+                    <%= f.number_field :floor, in: 0..5, step: 1, class: 'form-control-sm' %>                
+                    <br><br>
+                    <%= f.label :bell %>
+                    <%= f.number_field :bell, in: 0..5, step: 1, class: 'form-control-sm' %>
+                </div>
+                  
+              </div>
+                       
+                <%= f.submit "Submit", class: "btn btn-lg my-button" %>
+       
+        <% end %>
+      </div>
+   </div>
+ </div>
   
 <% end %>
  

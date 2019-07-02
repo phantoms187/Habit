@@ -109,10 +109,6 @@ label{
   }
 }
 
-#navnavy {
-  color: white;
-}
-
 .drop{
   color: white;
   background: black;
@@ -198,9 +194,6 @@ aside {
   }
 }
 
-#input{
-  background-color:white;
-}
 
 .my-button{
  background: #000000;
@@ -304,13 +297,16 @@ input {
   }
 }
 
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
+
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  
 }
 
 #session_remember_me {

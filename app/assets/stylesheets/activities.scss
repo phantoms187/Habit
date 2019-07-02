@@ -1,3 +1,49 @@
 // Place all the styles related to the Activities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$gray-medium-light: #eaeaea;
+$turtle-green: #73ff2d;
+$midnight: #191919;
+$mikey: #ffc43a;
+$leo: #42f1f4;
+$donny: #bb57f9;
+$raph: #e81b22;
+
+
+.daily {
+    display: inline-block;
+}
+
+form label {
+    color: $mikey;
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  background-color: $midnight;
+  color: $mikey;
+  position: relative;
+  left: 50px;
+    
+}
+
+input[type=number]
+{
+  height: 20px;
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+  border-radius: 10%;
+  background-color: $midnight;
+  color: $mikey;
+  position: relative;
+  left: auto;
+}
+
