@@ -1,3 +1,7 @@
+Built with the help of tutorial listed below. Customized to my liking. 
+A deployment can be found at phantoms187.herokuapp.com
+
+
 # Ruby on Rails Tutorial sample application
 
 This is the sample application for
